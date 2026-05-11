@@ -9,9 +9,13 @@
         --bg: #0b0f14;
         --panel: #141a22;
         --btn: #1b232d;
-        --btn-op: #222b37;
-        --btn-sci: #1e2733;
+        --btn-op: #2d2418;
+        --btn-sci: #251e33;
+        --btn-util: #2d1b20;
         --fg: #e6eaef;
+        --fg-op: #fbbf24;
+        --fg-sci: #a78bfa;
+        --fg-util: #fb7185;
         --muted: #8a95a3;
         --border: #222b37;
         --accent: #3b82f6;
@@ -22,9 +26,13 @@
         --bg: #fff;
         --panel: #f4f6f8;
         --btn: #f4f6f8;
-        --btn-op: #e6eaef;
-        --btn-sci: #eceff3;
+        --btn-op: #fef3c7;
+        --btn-sci: #ede9fe;
+        --btn-util: #ffe4e6;
         --fg: #0b0f14;
+        --fg-op: #b45309;
+        --fg-sci: #6d28d9;
+        --fg-util: #be123c;
         --muted: #5b6573;
         --border: #e1e5eb;
         --danger: #dc2626;
@@ -116,10 +124,10 @@
       }
       button.k:hover { filter: brightness(1.1); }
       button.k:active { transform: scale(0.97); }
-      button.k.op { background: var(--btn-op); }
-      button.k.sci { background: var(--btn-sci); font-size: 16px; }
-      button.k.util { background: var(--btn-sci); color: var(--muted); }
-      button.k.eq { background: var(--accent); color: var(--accent-fg); }
+      button.k.op { background: var(--btn-op); color: var(--fg-op); font-weight: 600; }
+      button.k.sci { background: var(--btn-sci); color: var(--fg-sci); font-size: 16px; font-weight: 500; }
+      button.k.util { background: var(--btn-util); color: var(--fg-util); font-weight: 500; }
+      button.k.eq { background: var(--accent); color: var(--accent-fg); font-weight: 600; }
       button.k.wide { grid-column: span 2; }
       button.k:focus-visible {
         outline: 2px solid var(--accent);
