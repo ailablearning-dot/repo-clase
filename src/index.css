@@ -1,0 +1,97 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/600.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme (default before JS sets data-theme) */
+  --bg: #ffffff;
+  --bg-elevated: #f4f6f8;
+  --bg-button: #f4f6f8;
+  --bg-button-op: #e6eaef;
+  --bg-button-sci: #eceff3;
+  --fg: #0b0f14;
+  --fg-muted: #5b6573;
+  --border: #e1e5eb;
+  --accent: #3b82f6;
+  --accent-fg: #ffffff;
+  --danger: #dc2626;
+  --focus-ring: #3b82f6;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+}
+
+:root[data-theme='dark'] {
+  --bg: #0b0f14;
+  --bg-elevated: #141a22;
+  --bg-button: #1b232d;
+  --bg-button-op: #222b37;
+  --bg-button-sci: #1e2733;
+  --fg: #e6eaef;
+  --fg-muted: #8a95a3;
+  --border: #222b37;
+  --accent: #3b82f6;
+  --accent-fg: #ffffff;
+  --danger: #f87171;
+  --focus-ring: #60a5fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color 200ms ease-out,
+    color 200ms ease-out;
+}
+
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0ms !important;
+    transition-duration: 0ms !important;
+  }
+}
