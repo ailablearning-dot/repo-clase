@@ -6,7 +6,11 @@ Calculadora científica web personal en un solo archivo HTML.
 
 ## Cómo usarla
 
-1. Descarga `calculadora.html`.
+**Opción A — Online (Vercel):**
+Abre la URL del despliegue.
+
+**Opción B — Local:**
+1. Descarga `index.html`.
 2. Doble clic en el archivo.
 3. Se abre en tu navegador y ya funciona.
 
