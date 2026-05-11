@@ -1,91 +1,56 @@
-# [Nombre del proyecto]
+# Calculadora científica
 
-<!-- Una frase que explique qué es el proyecto. -->
-
----
-
-## Qué es esto
-
-<!-- 2-3 párrafos explicando el problema que resuelve y cómo lo resuelve.
-     Sin jerga técnica. Pensado para alguien que entra al repositorio por primera vez. -->
+Calculadora científica web personal en un solo archivo HTML.
 
 ---
 
-## Requisitos previos
+## Cómo usarla
 
-<!-- Lista de lo que necesitas instalado antes de poder correr el proyecto.
-     Ejemplo:
-     - Node.js 18+
-     - Una cuenta de Supabase
-     - Variables de entorno configuradas (ver sección siguiente) -->
+**Opción A — Online (Vercel):**
+Abre la URL del despliegue.
 
----
+**Opción B — Local:**
+1. Descarga `index.html`.
+2. Doble clic en el archivo.
+3. Se abre en tu navegador y ya funciona.
 
-## Variables de entorno
-
-<!-- Lista de variables necesarias con descripción. Nunca pongas valores reales aquí.
-     Ejemplo:
-     ```
-     NEXT_PUBLIC_SUPABASE_URL=       # URL del proyecto Supabase
-     NEXT_PUBLIC_SUPABASE_ANON_KEY=  # Clave pública de Supabase
-     SUPABASE_SERVICE_ROLE_KEY=      # Clave privada (solo servidor)
-     RESEND_API_KEY=                 # API key de Resend para emails
-     ```
-     Copia `.env.example` a `.env.local` y rellena los valores. -->
+No requiere instalación, ni servidor, ni internet, ni nada.
 
 ---
 
-## Instalación y desarrollo
+## Qué incluye
 
-```bash
-# Clonar el repositorio
-git clone [url-del-repo]
-cd [nombre-del-proyecto]
-
-# Instalar dependencias
-npm install
-
-# Configurar variables de entorno
-cp .env.example .env.local
-# Edita .env.local con tus valores
-
-# Iniciar en modo desarrollo
-npm run dev
-```
-
-<!-- Añade pasos adicionales si son necesarios: migraciones de base de datos, seed, etc. -->
+- Operaciones básicas: `+`, `−`, `×`, `÷`.
+- Logaritmos: `log` (base 10), `ln` (natural).
+- Raíz cuadrada (`√`) y potencias (`x^y`).
+- Trigonometría en grados: `sin`, `cos`, `tan`.
+- Constantes: `π`, `e`.
+- Factorial (`n!`).
+- Paréntesis para agrupar.
+- Historial persistente: las operaciones se guardan en el navegador y siguen
+  ahí aunque cierres la pestaña. Clic en una entrada para recuperarla.
+- Modo claro y modo oscuro (toggle arriba a la derecha).
+- Entrada por teclado físico.
 
 ---
 
-## Estructura del proyecto
+## Atajos de teclado
 
-<!-- Explica brevemente qué hay en cada carpeta principal.
-     No hace falta listar cada archivo, solo las carpetas de primer nivel y su propósito. -->
-
----
-
-## Cómo contribuir o trabajar en el proyecto
-
-1. Lee `CLAUDE.md` antes de hacer cualquier cambio.
-2. Consulta `docs/` para entender las decisiones de diseño y arquitectura.
-3. Registra cualquier cambio relevante en `changelog/`.
-4. Si tienes ideas de mejora que no entran ahora, añádelas a `mejoras/`.
+| Tecla | Acción |
+|-------|--------|
+| `0`–`9`, `.` | Introducir dígito |
+| `+`, `-`, `*`, `/`, `^` | Operadores |
+| `(`, `)` | Paréntesis |
+| `!` | Factorial |
+| `Enter` o `=` | Evaluar |
+| `Backspace` | Borrar último carácter |
+| `Escape` | Limpiar todo |
 
 ---
 
-## Preguntas frecuentes
+## Estado
 
-<!-- Añade aquí las dudas que suelen surgir al trabajar con el proyecto.
-     Ejemplo:
-     **¿Por qué usamos App Router y no Pages Router?**
-     Porque el proyecto requiere Server Components para reducir el bundle del cliente.
-     
-     **¿Cómo añado una nueva tabla en Supabase?**
-     Crea una migración en supabase/migrations/ y actualiza docs/data-model.md. -->
+Funcional. Última actualización: 2026-05-11.
 
----
-
-## Estado del proyecto
-
-<!-- En desarrollo / Beta / Producción -->
-<!-- Última actualización: YYYY-MM-DD -->
+Los documentos en `docs/` recogen el contexto y las decisiones del producto.
+La carpeta `mejoras/` reúne ideas pendientes.
