@@ -1,81 +1,32 @@
 # Calculadora científica
 
-Calculadora científica web personal con historial persistente en el
-navegador. Sin cuentas, sin publicidad, sin backend.
+Calculadora científica web personal en un solo archivo HTML.
 
 ---
 
-## Qué es esto
+## Cómo usarla
 
-Una SPA (single page app) que sustituye a la calculadora del sistema operativo
-o a las calculadoras online llenas de anuncios. Soporta las operaciones
-aritméticas básicas y las funciones científicas habituales: logaritmos,
-raíz cuadrada, potencias arbitrarias, trigonometría (en grados), factorial y
-las constantes π y e.
+1. Descarga `calculadora.html`.
+2. Doble clic en el archivo.
+3. Se abre en tu navegador y ya funciona.
 
-Cada operación que evalúas queda registrada en un historial persistente
-(`localStorage`) que sobrevive al cierre de la pestaña. Tiene modo claro y
-modo oscuro, soporta el teclado físico y es completamente responsive.
-
-Construida como ejercicio de aprendizaje de **Vite + React + TypeScript +
-Tailwind**.
+No requiere instalación, ni servidor, ni internet, ni nada.
 
 ---
 
-## Requisitos previos
+## Qué incluye
 
-- Node.js 18+ (probado con Node 22)
-- npm 9+
-
----
-
-## Variables de entorno
-
-Ninguna. La app no se comunica con ningún servicio externo en runtime.
-
----
-
-## Instalación y desarrollo
-
-```bash
-# Instalar dependencias
-npm install
-
-# Iniciar en modo desarrollo (http://localhost:5173)
-npm run dev
-
-# Build de producción (genera dist/)
-npm run build
-
-# Ejecutar tests del motor de cálculo
-npm test
-
-# Comprobación de tipos
-npm run typecheck
-```
-
----
-
-## Estructura del proyecto
-
-```
-src/
-├── main.tsx            → Entry point
-├── App.tsx             → Composición raíz (providers + layout)
-├── index.css           → Tokens CSS y reset
-├── components/         → Display, Keypad, CalculatorButton,
-│                         HistoryPanel, HistoryEntry, ThemeToggle
-├── state/              → Reducer + Context + tipos de acciones
-├── lib/
-│   ├── engine/         → tokenize → parse → evaluate → format
-│   └── history.ts      → Persistencia del historial en localStorage
-├── hooks/              → useTheme, useKeyboard
-├── types/              → Tipos compartidos (Token, CalculatorState, ...)
-└── test/               → Tests con Vitest
-docs/                   → PRD, arquitectura, data-model, design-system, ...
-changelog/              → Registro cronológico de cambios
-mejoras/                → Backlog de ideas
-```
+- Operaciones básicas: `+`, `−`, `×`, `÷`.
+- Logaritmos: `log` (base 10), `ln` (natural).
+- Raíz cuadrada (`√`) y potencias (`x^y`).
+- Trigonometría en grados: `sin`, `cos`, `tan`.
+- Constantes: `π`, `e`.
+- Factorial (`n!`).
+- Paréntesis para agrupar.
+- Historial persistente: las operaciones se guardan en el navegador y siguen
+  ahí aunque cierres la pestaña. Clic en una entrada para recuperarla.
+- Modo claro y modo oscuro (toggle arriba a la derecha).
+- Entrada por teclado físico.
 
 ---
 
@@ -89,21 +40,13 @@ mejoras/                → Backlog de ideas
 | `!` | Factorial |
 | `Enter` o `=` | Evaluar |
 | `Backspace` | Borrar último carácter |
-| `Escape` | Limpiar todo (AC) |
+| `Escape` | Limpiar todo |
 
 ---
 
-## Cómo contribuir o trabajar en el proyecto
+## Estado
 
-1. Lee `CLAUDE.md` antes de hacer cualquier cambio.
-2. Consulta `docs/` para entender las decisiones de diseño y arquitectura.
-3. Registra cualquier cambio relevante en `changelog/`.
-4. Si tienes ideas de mejora que no entran ahora, añádelas a `mejoras/`.
+Funcional. Última actualización: 2026-05-11.
 
----
-
-## Estado del proyecto
-
-En desarrollo (MUST del PRD entregado).
-
-Última actualización: 2026-05-11.
+Los documentos en `docs/` recogen el contexto y las decisiones del producto.
+La carpeta `mejoras/` reúne ideas pendientes.
